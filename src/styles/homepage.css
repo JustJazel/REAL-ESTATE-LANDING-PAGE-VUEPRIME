@@ -228,3 +228,57 @@
   }
 }
 
+/* ===== FIELD RESPONSIVENESS ===== */
+
+/* Ensure inputs and dropdowns fill their container */
+.field .p-input-filled,
+.field input,
+.field .p-dropdown {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Prevent overflow and maintain spacing */
+.field {
+  min-width: 0;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .field-label {
+    font-size: 0.85rem;
+  }
+
+  .p-input-filled {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .search-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-card {
+    padding: 1rem;
+  }
+
+  .search-title {
+    font-size: 1.4rem;
+  }
+
+  .field-label {
+    font-size: 0.8rem;
+  }
+
+  .p-input-filled {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .search-btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

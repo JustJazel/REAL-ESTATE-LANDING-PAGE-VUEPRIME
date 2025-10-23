@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header />
+    <Header  />
 
     <div class="home-page">
       <!-- 🟦 HERO SECTION -->
@@ -17,10 +17,10 @@
 
       <!-- 🔻 SECTION DIVIDERS & CONTENT -->
       <FormPage class="fade-section" />
-      <Service class="fade-section" />
-      <Gallery class="fade-section" />
-      <Testimonial class="fade-section" />
-      <Contact class="fade-section" />
+      <Service id="services" class="fade-section" />
+      <Gallery id="gallery" class="fade-section" />
+      <Testimonial id="testimonials" class="fade-section" />
+      <Contact id="contact" class="fade-section" />
       <Footer class="fade-section" />
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <Header  />
-
+   <Header  />
+  <div id ="home" class="home">
+   
     <div class="home-page">
       <!-- 🟦 HERO SECTION -->
       <section class="landing-page-hero fade-section">
@@ -27,6 +27,7 @@
 </template>
 
 <script setup>
+import Hero from '../components/HeroSection.vue'
 import Header from '../components/Header.vue'
 import FormPage from './FormPage.vue'
 import Service from '../components/Service.vue'

@@ -3,7 +3,6 @@
     <div class="header-inner">
       <img src="/logomarci.webp" alt="Marci Metzger logo" class="logo" id="home"  />
       <nav class="nav">
-        <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#testimonials">Testimonials</a>

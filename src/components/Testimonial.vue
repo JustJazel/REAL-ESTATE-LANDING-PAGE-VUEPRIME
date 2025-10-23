@@ -26,7 +26,7 @@ Our team works hard everyday to grow and learn, so that we may continue to excel
 
 <template>
   <section class="testimonial-section">
-    <h2>Client Testimonials</h2>
+    <h2>Precision in Every Sale</h2>
     <div class="testimonial-grid">
       <Card v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
         <template #content>

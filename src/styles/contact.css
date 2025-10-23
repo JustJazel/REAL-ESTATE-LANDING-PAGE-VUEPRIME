@@ -116,3 +116,19 @@
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
+
+/* ---------- MAP CARD SPACING ---------- */
+.map-card {
+  margin-top: 3rem; /* adds clean space above the map */
+  border-radius: 20px;
+  background-color: var(--surface-card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .map-card {
+    margin-top: 2rem;
+  }
+}
+

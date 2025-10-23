@@ -9,7 +9,7 @@
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--page-bg);
   overflow-x: hidden;
-  margin-top: 3ew;
+  margin-top: 3;
 }
 
 /* ===== COLOR THEMES ===== */
@@ -227,4 +227,3 @@
     display: none;
   }
 }
-

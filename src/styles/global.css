@@ -1,86 +1,194 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  object-fit: contain;
+/* 🌞 Light Mode: "Clarity & Warmth" */
+:root {
+  /* 🎨 Core Colors */
+  --bg-main: #f5f5f5;              /* Soft White */
+  --bg-section: #eae7dc;           /* Muted Sand */
+  --text-main: #1e1e1e;            /* Charcoal Black */
+  --accent: #ffba00;               /* Gold Ember */
+  --border-color: #dcdcdc;         /* Soft Gray */
+  --hover-detail: #1e3a8a;         /* Slate Blue */
+  --cta-bg: #fff8e1;               /* Pale Gold Wash */
+  --footer-bg: #3a3a3a;            /* Deep Taupe */
+  --overlay: rgba(0, 0, 0, 0.1);   /* Transparent Black */
+
+  /* 🌐 Header */
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-bg-scrolled: #ffffff;
+  --header-text: var(--text-main);
+  --header-shadow: rgba(0, 0, 0, 0.12);
+  --header-shadow-scrolled: rgba(0, 0, 0, 0.2);
+  --nav-hover: var(--hover-detail);
+
+  /* 🏡 Homepage Form */
+  --card-bg: #ffffff;
+  --card-text: var(--text-main);
+  --field-bg: #f9fafb;
+  --field-border: #ccc;
+  --label-color: #3a3a3a;
+  --button-bg: var(--accent);
+  --button-hover: #e0a800;
+  --button-text: #1e1e1e;
+
+  /* 🦶 Footer */
+  --footer-text: #f5f5f5;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+/* 🌙 Dark Mode: "Elegance & Depth" */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #1e1e1e;              /* Charcoal Black */
+    --bg-section: #2a2a2a;           /* Shadow Gray */
+    --text-main: #f5f5f5;            /* Soft White */
+    --accent: #ffba00;               /* Gold Ember */
+    --border-color: #444444;         /* Dim Gray */
+    --hover-detail: #1e3a8a;         /* Slate Blue */
+    --cta-bg: #3b2f00;               /* Deep Gold Wash */
+    --footer-bg: #121212;            /* Blackened Bronze */
+    --overlay: rgba(255, 255, 255, 0.1); /* Transparent White */
+
+    /* 🌐 Header */
+    --header-bg: rgba(30, 30, 30, 0.85);
+    --header-bg-scrolled: #1e1e1e;
+    --header-text: #f5f5f5;
+    --header-shadow: rgba(0, 0, 0, 0.4);
+    --header-shadow-scrolled: rgba(0, 0, 0, 0.6);
+    --nav-hover: var(--accent);
+
+    /* 🏡 Homepage Form */
+    --card-bg: #1e1e1e;
+    --card-text: #f5f5f5;
+    --field-bg: #2a2a2a;
+    --field-border: #444;
+    --label-color: #d6bfb9;
+    --button-bg: var(--accent);
+    --button-hover: #e0a800;
+    --button-text: #1e1e1e;
+
+    /* 🦶 Footer */
+    --footer-text: #f5f5f5;
+  }
 }
 
-section {
-  margin-top: 0 !important;
-   margin-bottom: 0 !important;
-  padding-top: 2rem; /* or whatever fits your layout */
-}
-
-/* Make all PrimeVue dividers invisible */
-.p-divider::before,
-.p-divider::after {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: none !important;
-}
-
-
+/* 🌍 Global Base Styles */
 #app {
   font-family: 'Segoe UI', sans-serif;
 }
 
-:root {
-  /* Header.css */
-  --header-bg: rgba(255, 255, 255, 0.85);
-  --header-bg-scrolled: #ffffff;
-  --header-text: #333;
-  --header-shadow: rgba(0, 0, 0, 0.12);
-  --header-shadow-scrolled: rgba(0, 0, 0, 0.2);
-  --nav-hover: #1793FF;
+.home {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-  /*Homepage form*/
-  --card-bg: #ffffff;
-  --card-text: #222;
-  --field-bg: #f9fafb;
-  --field-border: #ccc;
-  --label-color: #7c5753;
-  --button-bg: #1793ff;
-  --button-hover: #0f74cc;
-  --button-text: #fff;
-  
-  /*Footer*/
-   --footer-bg: #ffffff; /* Light mode: white */
+.home-page {
+  background: var(--bg-section);
+  overflow-x: hidden;
+  transition: background 0.4s ease;
+}
 
+section {
+  margin: 0 !important;
+  padding-top: 2rem;
+}
+
+.p-divider::before,
+.p-divider::after {
+  border: none !important;
+}
+
+/* ✨ Buttons & Links */
+.search-btn {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: none !important;
+  transition: background-color 0.3s ease;
+}
+.search-btn:hover {
+  background-color: var(--button-hover) !important;
+}
+
+/* ✨ Fade-in animation for scroll sections */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.4s ease;
+  will-change: opacity, transform;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✨ Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ✨ Overlay for images or hero */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 1;
+}
+
+/* 🖼️ Logo Fix */
+.logo {
+  height: 7rem; /* smaller size */
+  padding: 1rem;
+  will-change: filter;
+  transition: filter 300ms, transform 0.3s ease;
+  object-fit: contain;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1em var(--accent));
+  transform: scale(1.05);
+}
+
+/* Adjust logo size on smaller screens */
+@media (max-width: 768px) {
+  .logo {
+    height: 3rem;
+    padding: 0.5rem;
+  }
+}
+
+/* 🦶 Footer Fix */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--hover-detail);
+}
+
+/* Light vs Dark footer text clarity */
+@media (prefers-color-scheme: light) {
+  footer {
+    color: #1e1e1e; /* readable on pale gold / soft white */
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-   
-  :root {
-  /* Header.css */
-    --header-bg: rgba(30, 30, 30, 0.85);
-    --header-bg-scrolled: #1e1e1e;
-    --header-text: #f0f0f0;
-    --header-shadow: rgba(0, 0, 0, 0.4);
-    --header-shadow-scrolled: rgba(0, 0, 0, 0.6);
-    --nav-hover: #1793FF;
-
-
-  /*Homepage form*/
-    --card-bg: #1e1e1e;
-    --card-text: #f0f0f0;
-    --field-bg: #2a2a2a;
-    --field-border: #444;
-    --label-color: #d6bfb9;
-    --button-bg: #1793ff;
-    --button-hover: #0f74cc;
-    --button-text: #ffffff;
-
-  /*Footer*/
-    --footer-bg: #000000; /* Dark mode: black */
-
+  footer {
+    color: #f5f5f5; /* readable on blackened bronze */
   }
 }

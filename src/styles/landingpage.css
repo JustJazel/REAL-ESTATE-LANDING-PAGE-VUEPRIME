@@ -1,0 +1,44 @@
+/* 🎬 Cinematic Hero Section */
+.landing-page-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.landing-page-background {
+  background-image: url('/lp1.jpg'); /* Use public folder or adjust path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  filter: brightness(75%);
+}
+
+.landing-page-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page-content {
+  text-align: center;
+  color: #fff;
+  padding: 2em;
+}
+
+.landing-page-content h1 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.landing-page-content p {
+  font-size: 1.4em;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

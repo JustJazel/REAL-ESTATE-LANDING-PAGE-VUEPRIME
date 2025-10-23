@@ -15,6 +15,11 @@ const contactInfo = {
     'Appointments outside office hours available upon request'
   ]
 }
+
+function openWhatsApp() {
+  window.open('https://wa.me/14259412560', '_blank')
+}
+
 </script>
 
 <template>
@@ -39,7 +44,14 @@ const contactInfo = {
             <Textarea id="message" rows="5" class="contact-textarea" />
 
             <Button label="SEND" severity="primary" class="send-btn" />
-            <Button label="Message us on WhatsApp" severity="success" class="whatsapp-btn" icon="pi pi-whatsapp" />
+           <Button
+                label="Message us on WhatsApp"
+                severity="success"
+                class="whatsapp-btn"
+                icon="pi pi-whatsapp"
+                @click="openWhatsApp"
+              />
+ 
           </form>
         </template>
       </Card>

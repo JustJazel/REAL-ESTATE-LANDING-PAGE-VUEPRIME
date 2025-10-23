@@ -1,0 +1,127 @@
+.section.section-light {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: var(--card-bg);
+}
+
+/* Gallery layout */
+.gallery-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.gallery-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--label-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Carousel structure */
+.carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------- */
+/* 🎯 Carousel Indicators */
+/* --------------------------- */
+
+/* Base indicator button */
+:where(.p-carousel) .p-carousel-indicator button {
+  background-color: #dcdcdc !important;
+  border: 2px solid transparent !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Active indicator — clearly highlighted */
+:where(.p-carousel) .p-carousel-indicator.p-highlight button {
+  background-color: #48a9e6 !important; /* Sky blue active */
+  border-color: #48a9e6 !important;
+  box-shadow: 0 0 10px rgba(72, 169, 230, 0.8) !important;
+  transform: scale(1.35);
+  opacity: 1;
+}
+
+/* Hover effect for all indicators */
+:where(.p-carousel) .p-carousel-indicator button:hover {
+  background-color: #d4af37 !important; /* Gold hover */
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8) !important;
+  opacity: 1;
+}
+
+/* Optional: add slight spacing */
+:where(.p-carousel) .p-carousel-indicators {
+  gap: 0.75rem !important;
+}
+
+/* --------------------------- */
+/* 🎯 Carousel Arrows */
+/* --------------------------- */
+:where(.p-carousel) .p-carousel-prev,
+:where(.p-carousel) .p-carousel-next {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: none !important;
+  color: #1e3a8a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+:where(.p-carousel) .p-carousel-prev:hover,
+:where(.p-carousel) .p-carousel-next:hover {
+  background: #48a9e6 !important;
+  color: #fff !important;
+  box-shadow: 0 0 10px rgba(72, 169, 230, 0.8);
+}
+
+/* --------------------------- */
+/* 🌙 Dark Mode */
+/* --------------------------- */
+@media (prefers-color-scheme: dark) {
+  :where(.p-carousel) .p-carousel-prev,
+  :where(.p-carousel) .p-carousel-next {
+    background: rgba(30, 30, 30, 0.9) !important;
+    color: #48a9e6 !important;
+  }
+
+  :where(.p-carousel) .p-carousel-prev:hover,
+  :where(.p-carousel) .p-carousel-next:hover {
+    background: #48a9e6 !important;
+    color: #fff !important;
+  }
+
+  :where(.p-carousel) .p-carousel-indicator button {
+    background-color: #444 !important;
+  }
+
+  :where(.p-carousel) .p-carousel-indicator.p-highlight button {
+    background-color: #d4af37 !important; /* gold active in dark mode */
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8) !important;
+  }
+}
+

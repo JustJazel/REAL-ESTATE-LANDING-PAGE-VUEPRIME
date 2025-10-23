@@ -1,0 +1,102 @@
+/* ===== HEADER WRAPPER ===== */
+.modern-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  box-shadow: 0 4px 20px var(--header-shadow);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+  padding: 1.2rem 2rem;
+}
+
+/* ===== SCROLLED STATE ===== */
+.modern-header.scrolled {
+  background: var(--header-bg-scrolled);
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 24px var(--header-shadow-scrolled);
+}
+
+/* ===== INNER CONTAINER ===== */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ===== LOGO ===== */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  margin-right: auto;
+  transition: filter 0.4s ease, opacity 0.3s ease;
+  filter: brightness(0) invert(0); /* Default: black text for light mode */
+}
+
+
+/* ===== NAVIGATION ===== */
+.nav {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.4px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--nav-hover);
+}
+
+.modern-header.scrolled .nav a {
+  color: var(--header-text);
+}
+
+/* ===== LIGHT MODE HOVER ===== */
+.logo:hover {
+  filter: brightness(0.8) invert(0); /* slightly darker hover */
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: brightness(0) invert(1); /* White logo for dark mode */
+  }
+
+   
+}
+
+/* Fallback if you’re using a manual toggle (e.g. class="dark-mode" on <body>) */
+.dark-mode .logo {
+  filter: brightness(0) invert(1);
+
+
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .logo {
+    height: 90px;
+  }
+
+  .nav {
+    display: none;
+  }
+}

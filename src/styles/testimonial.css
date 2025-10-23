@@ -1,0 +1,56 @@
+.testimonial-section {
+  padding: 4rem 2rem;
+  background-color: var(--card-bg);
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--label-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  background-color: var(--surface-card);
+}
+
+.testimonial-img {
+  width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px; /* Optional: soften corners */
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--label-color);
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--card-text);
+  font-style: italic;
+}

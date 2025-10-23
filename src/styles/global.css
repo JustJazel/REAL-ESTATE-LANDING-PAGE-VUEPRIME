@@ -1,0 +1,86 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  object-fit: contain;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+section {
+  margin-top: 0 !important;
+   margin-bottom: 0 !important;
+  padding-top: 2rem; /* or whatever fits your layout */
+}
+
+/* Make all PrimeVue dividers invisible */
+.p-divider::before,
+.p-divider::after {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+
+#app {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+  /* Header.css */
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-bg-scrolled: #ffffff;
+  --header-text: #333;
+  --header-shadow: rgba(0, 0, 0, 0.12);
+  --header-shadow-scrolled: rgba(0, 0, 0, 0.2);
+  --nav-hover: #1793FF;
+
+  /*Homepage form*/
+  --card-bg: #ffffff;
+  --card-text: #222;
+  --field-bg: #f9fafb;
+  --field-border: #ccc;
+  --label-color: #7c5753;
+  --button-bg: #1793ff;
+  --button-hover: #0f74cc;
+  --button-text: #fff;
+  
+  /*Footer*/
+   --footer-bg: #ffffff; /* Light mode: white */
+
+}
+
+@media (prefers-color-scheme: dark) {
+   
+  :root {
+  /* Header.css */
+    --header-bg: rgba(30, 30, 30, 0.85);
+    --header-bg-scrolled: #1e1e1e;
+    --header-text: #f0f0f0;
+    --header-shadow: rgba(0, 0, 0, 0.4);
+    --header-shadow-scrolled: rgba(0, 0, 0, 0.6);
+    --nav-hover: #1793FF;
+
+
+  /*Homepage form*/
+    --card-bg: #1e1e1e;
+    --card-text: #f0f0f0;
+    --field-bg: #2a2a2a;
+    --field-border: #444;
+    --label-color: #d6bfb9;
+    --button-bg: #1793ff;
+    --button-hover: #0f74cc;
+    --button-text: #ffffff;
+
+  /*Footer*/
+    --footer-bg: #000000; /* Dark mode: black */
+
+  }
+}
